@@ -18,18 +18,35 @@ import ResumeButton from "./ResumeButton.astro";
 </aside>
 
 <script type="module">
+    const breakpoint = "768";
     const menuButton = document.querySelector("#menuButton");
     const menu = document.querySelector("#menu");
     const closeMenuButton = document.querySelector("#closeMenu");
     const menuAnchors = document.querySelectorAll(".menu-anchor");
+    const mediaQuery = window.matchMedia(`(min-width: ${breakpoint}px)`);
 
     function toggleMenu() {
         menu.classList.toggle("opacity-0");
         menu.classList.toggle("translate-x-[100vw]");
         menu.ariaHidden = menu.ariaHidden === "false" ? "true" : "false";
+        document.body.classList.toggle("overflow-y-hidden");
     }
 
-    menuButton.addEventListener("click", toggleMenu);
-    closeMenuButton.addEventListener("click", toggleMenu);
-    menuAnchors.forEach(anchor => anchor.addEventListener("click", toggleMenu));
+    function addListeners() {
+        [menuButton, closeMenuButton, ...menuAnchors].forEach(elem =>
+            elem.addEventListener("click", toggleMenu)
+        );
+    }
+
+    function removeEventListeners() {
+        [menuButton, closeMenuButton, ...menuAnchors].forEach(elem =>
+            elem.removeEventListener("click", toggleMenu)
+        );
+    }
+
+    if (document.documentElement.clientWidth < breakpoint) addListeners();
+
+    mediaQuery.addEventListener("change", e =>
+        e.matches ? removeEventListeners() : addListeners()
+    );
 </script>
