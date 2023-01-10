@@ -48,4 +48,21 @@ import { Header, Menu, Hero } from "components";
         src: url(/fonts/SFMono-Regular.woff2) format("woff2");
         font-weight: 400;
     }
+
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #94a3b8 transparent;
+    }
+
+    html::-webkit-scrollbar {
+        @apply w-3;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        @apply rounded-full border-[3px] border-solid border-transparent bg-slate-400 bg-clip-content;
+    }
+
+    html::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
 </style>
