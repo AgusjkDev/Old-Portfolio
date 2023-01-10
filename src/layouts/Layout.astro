@@ -1,5 +1,5 @@
 ---
-import { Header, Menu } from "components";
+import { Header, Menu, Hero } from "components";
 ---
 
 <html lang="es">
@@ -10,11 +10,13 @@ import { Header, Menu } from "components";
         <title>Agustín Arnoldi | Portfolio</title>
     </head>
 
-    <body class="bg-slate-800">
+    <body class="flex flex-col items-center bg-slate-800">
         <Header />
 
         <!-- Only visible for smaller devices -->
         <Menu />
+
+        <Hero />
     </body>
 </html>
 
