@@ -1,0 +1,45 @@
+---
+import { Header, Menu } from "components";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Agustín Arnoldi | Portfolio</title>
+    </head>
+
+    <body class="bg-slate-800">
+        <Header />
+
+        <!-- Only visible for smaller devices -->
+        <Menu />
+    </body>
+</html>
+
+<style>
+    @font-face {
+        font-family: "Calibre";
+        src: url(/fonts/Calibre-Regular.woff2) format("woff2");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "Calibre";
+        src: url(/fonts/Calibre-Medium.woff2) format("woff2");
+        font-weight: 500;
+    }
+
+    @font-face {
+        font-family: "Calibre";
+        src: url(/fonts/Calibre-Semibold.woff2) format("woff2");
+        font-weight: 600;
+    }
+
+    @font-face {
+        font-family: "SF Mono";
+        src: url(/fonts/SFMono-Regular.woff2) format("woff2");
+        font-weight: 400;
+    }
+</style>

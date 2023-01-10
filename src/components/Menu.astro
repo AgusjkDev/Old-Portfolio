@@ -1,0 +1,35 @@
+---
+import Navbar from "./Navbar.astro";
+import ResumeButton from "./ResumeButton.astro";
+---
+
+<aside
+    id="menu"
+    aria-hidden="true"
+    class="fixed inset-0 flex translate-x-[100vw] flex-col items-center justify-around bg-slate-800 py-20 opacity-0 transition-all duration-500 sm:hidden"
+>
+    <button id="closeMenu" aria-label="Cerrar Menu">
+        <img alt="Cerrar Menu" src="/imgs/close.svg" decoding="async" fetchpriority="high" />
+    </button>
+
+    <Navbar />
+
+    <ResumeButton />
+</aside>
+
+<script type="module">
+    const menuButton = document.querySelector("#menuButton");
+    const menu = document.querySelector("#menu");
+    const closeMenuButton = document.querySelector("#closeMenu");
+    const menuAnchors = document.querySelectorAll(".menu-anchor");
+
+    function toggleMenu() {
+        menu.classList.toggle("opacity-0");
+        menu.classList.toggle("translate-x-[100vw]");
+        menu.ariaHidden = menu.ariaHidden === "false" ? "true" : "false";
+    }
+
+    menuButton.addEventListener("click", toggleMenu);
+    closeMenuButton.addEventListener("click", toggleMenu);
+    menuAnchors.forEach(anchor => anchor.addEventListener("click", toggleMenu));
+</script>

@@ -1,0 +1,27 @@
+---
+import Navbar from "./Navbar.astro";
+---
+
+<header
+    class="sticky top-0 flex items-center justify-between bg-slate-800 py-8 px-7 md:px-12 lg:px-16 xl:px-20 2xl:px-24"
+>
+    <a href="/" aria-label="Inicio">
+        <img
+            alt="Perfil"
+            src="/imgs/profile.jpg"
+            class="w-11 rounded-full border-2 border-neutral-300 transition-colors duration-300 hover:border-sky-400"
+            decoding="async"
+            fetchpriority="high"
+        />
+    </a>
+
+    <!-- Only visible for smaller devices -->
+    <button id="menuButton" aria-label="Abrir Menu" class="sm:hidden">
+        <img alt="Abrir Menu" src="/imgs/menu.svg" decoding="async" fetchpriority="high" />
+    </button>
+
+    <!-- Only visible for larger devices -->
+    <div class="hidden sm:block">
+        <Navbar />
+    </div>
+</header>

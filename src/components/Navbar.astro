@@ -1,0 +1,23 @@
+---
+import ResumeButton from "./ResumeButton.astro";
+import { navbarAnchors } from "data";
+---
+
+<nav class="flex flex-col items-center gap-10 sm:flex-row sm:gap-5 md:gap-8">
+    {
+        navbarAnchors.map(({ href, children }, i) => (
+            <a
+                href={href}
+                class="menu-anchor font-sfmono flex flex-col text-center text-lg font-medium text-neutral-300 transition-colors duration-300 hover:text-sky-400 sm:flex-row sm:items-center sm:gap-1 sm:text-xs"
+            >
+                <span class="text-sm text-sky-400 sm:text-xs">0{i + 1}.</span>
+                {children}
+            </a>
+        ))
+    }
+
+    <!-- Only visible for larger devices -->
+    <div class="hidden sm:block">
+        <ResumeButton />
+    </div>
+</nav>
