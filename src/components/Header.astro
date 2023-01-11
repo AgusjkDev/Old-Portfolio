@@ -18,15 +18,17 @@ import Navbar from "./Navbar.astro";
 
 <style>
     .animate-fade-in-down {
-        animation: fade-in-down 1.25s 3s both;
-        @apply md:[animation-delay:2.5s];
+        animation: fade-in-down 1.5s 2.85s both;
+        @apply md:[animation-delay:2.5s] md:[animation-duration:1.25s];
     }
 
     @keyframes fade-in-down {
         0% {
+            opacity: 0;
             transform: translateY(-100%);
         }
         100% {
+            opacity: 1;
             transform: translateY(0%);
         }
     }
