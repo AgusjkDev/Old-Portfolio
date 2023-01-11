@@ -3,7 +3,7 @@ import Navbar from "./Navbar.astro";
 ---
 
 <header
-    class="fixed top-0 z-[1] grid w-full place-items-center bg-slate-800/90 py-8 backdrop-blur-[10px] md:py-10"
+    class="animate-fade-in-down fixed top-0 z-[1] grid w-full place-items-center bg-slate-800/90 py-8 backdrop-blur-[10px] md:py-10"
 >
     <!-- Only visible for smaller devices -->
     <button id="menuButton" aria-label="Abrir Menu" class="md:hidden">
@@ -15,3 +15,18 @@ import Navbar from "./Navbar.astro";
         <Navbar />
     </div>
 </header>
+
+<style>
+    .animate-fade-in-down {
+        animation: fade-in-down 1.25s 2.75s both;
+    }
+
+    @keyframes fade-in-down {
+        0% {
+            transform: translateY(-100%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+</style>
