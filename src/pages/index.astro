@@ -1,5 +1,74 @@
 ---
-import { Layout } from "layouts";
+import { Header, Menu, Socials, Email, Hero } from "components";
 ---
 
-<Layout />
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+            name="description"
+            content="Soy un desarrollador que busca superarse a diario. Interesado en vivir nuevas experiencias en el rubro tecnológico. Actualmente estudiando y aspirando a ser un gran programador de la nueva era."
+        />
+        <meta name="generator" content={Astro.generator} />
+        <title>Agustín Arnoldi | Portfolio</title>
+    </head>
+
+    <body class="flex flex-col items-center bg-slate-800">
+        <Header />
+
+        <!-- Only visible for smaller devices -->
+        <Menu />
+
+        <!-- Only visible for larger devices -->
+        <Socials />
+
+        <!-- Only visible for larger devices -->
+        <Email />
+
+        <Hero />
+    </body>
+</html>
+
+<style>
+    @font-face {
+        font-family: "Calibre";
+        src: url(/fonts/Calibre-Regular.woff2) format("woff2");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "Calibre";
+        src: url(/fonts/Calibre-Medium.woff2) format("woff2");
+        font-weight: 500;
+    }
+
+    @font-face {
+        font-family: "Calibre";
+        src: url(/fonts/Calibre-Semibold.woff2) format("woff2");
+        font-weight: 600;
+    }
+
+    @font-face {
+        font-family: "SF Mono";
+        src: url(/fonts/SFMono-Regular.woff2) format("woff2");
+        font-weight: 400;
+    }
+
+    html {
+        scrollbar-width: thin;
+        scrollbar-color: #94a3b8 transparent;
+    }
+
+    html::-webkit-scrollbar {
+        @apply w-3;
+    }
+
+    html::-webkit-scrollbar-thumb {
+        @apply rounded-full border-[3px] border-solid border-transparent bg-slate-400 bg-clip-content;
+    }
+
+    html::-webkit-scrollbar-track {
+        @apply bg-transparent;
+    }
+</style>
