@@ -1,0 +1,55 @@
+---
+import SideColumn from "./SideColumn.astro";
+import { socials } from "data";
+---
+
+<SideColumn orientation="left">
+    {
+        socials.map(({ name, href, viewBox, paths }) => (
+            <a
+                aria-label={name}
+                title={`¡Contáctame vía ${name}!`}
+                href={href}
+                target="_blank"
+                class={`transition-transform duration-300 hover:-translate-y-1 social-${name.toLowerCase()}`}
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24px"
+                    height="24px"
+                    viewBox={viewBox}
+                >
+                    {paths.map(({ d }) => (
+                        <path
+                            class="fill-slate-400 transition-colors duration-300"
+                            fill-rule="evenodd"
+                            d={d}
+                        />
+                    ))}
+                </svg>
+            </a>
+        ))
+    }
+</SideColumn>
+
+<style>
+    .social-whatsapp {
+        @apply [&>svg>path]:hover:fill-green-400;
+    }
+
+    .social-twitter {
+        @apply [&>svg>path]:hover:fill-sky-400;
+    }
+
+    .social-instagram {
+        @apply [&>svg>path]:hover:fill-pink-400;
+    }
+
+    .social-github {
+        @apply [&>svg>path]:hover:fill-white;
+    }
+
+    .social-linkedin {
+        @apply [&>svg>path]:hover:fill-blue-500;
+    }
+</style>

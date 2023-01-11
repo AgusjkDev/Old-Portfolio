@@ -1,0 +1,35 @@
+---
+const { orientation } = Astro.props as SideColumnProps;
+---
+
+<div
+    class={`animate-fade-in-up hidden md:block fixed bottom-0 ${
+        orientation === "left" ? "left-12" : "right-12"
+    }`}
+>
+    <div class="vertical-line relative flex flex-col gap-6">
+        <slot />
+    </div>
+</div>
+
+<style>
+    .vertical-line::after {
+        @apply mx-auto mt-1 h-24 w-[1px] bg-slate-400 content-[""];
+    }
+</style>
+
+<style>
+    .animate-fade-in-up {
+        animation: fade-in-up 1.25s 3s both;
+        @apply md:[animation-delay:2.5s];
+    }
+
+    @keyframes fade-in-up {
+        0% {
+            transform: translateY(125%);
+        }
+        100% {
+            transform: translateY(0%);
+        }
+    }
+</style>
