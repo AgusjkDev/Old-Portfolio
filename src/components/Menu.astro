@@ -6,7 +6,7 @@ import ResumeButton from "./ResumeButton.astro";
 <aside
     id="menu"
     aria-hidden="true"
-    class="fixed inset-0 z-[2] flex translate-x-[100vw] flex-col items-center justify-around bg-slate-800/[0.975] py-20 opacity-0 transition-all duration-500 md:hidden"
+    class="fixed inset-0 z-[2] hidden translate-x-[100vw] flex-col items-center justify-around bg-slate-800/[0.975] py-20 opacity-0 transition-all duration-500 md:hidden"
 >
     <button id="closeMenu" aria-label="Cerrar Menu">
         <img alt="Cerrar Menu" src="/imgs/close.svg" decoding="async" fetchpriority="high" />
@@ -26,6 +26,8 @@ import ResumeButton from "./ResumeButton.astro";
     const mediaQuery = window.matchMedia(`(min-width: ${breakpoint}px)`);
 
     function toggleMenu() {
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
         menu.classList.toggle("opacity-0");
         menu.classList.toggle("translate-x-[100vw]");
         menu.ariaHidden = menu.ariaHidden === "false" ? "true" : "false";
