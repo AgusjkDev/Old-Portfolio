@@ -1,5 +1,6 @@
 ---
 import { Header, Menu, Socials, Email, Hero } from "components";
+import "styles/globals.css";
 ---
 
 <html lang="es">
@@ -29,46 +30,3 @@ import { Header, Menu, Socials, Email, Hero } from "components";
         <Hero />
     </body>
 </html>
-
-<style>
-    @font-face {
-        font-family: "Calibre";
-        src: url(/fonts/Calibre-Regular.woff2) format("woff2");
-        font-weight: 400;
-    }
-
-    @font-face {
-        font-family: "Calibre";
-        src: url(/fonts/Calibre-Medium.woff2) format("woff2");
-        font-weight: 500;
-    }
-
-    @font-face {
-        font-family: "Calibre";
-        src: url(/fonts/Calibre-Semibold.woff2) format("woff2");
-        font-weight: 600;
-    }
-
-    @font-face {
-        font-family: "SF Mono";
-        src: url(/fonts/SFMono-Regular.woff2) format("woff2");
-        font-weight: 400;
-    }
-
-    html {
-        scrollbar-width: thin;
-        scrollbar-color: #94a3b8 transparent;
-    }
-
-    html::-webkit-scrollbar {
-        @apply w-3;
-    }
-
-    html::-webkit-scrollbar-thumb {
-        @apply rounded-full border-[3px] border-solid border-transparent bg-slate-400 bg-clip-content;
-    }
-
-    html::-webkit-scrollbar-track {
-        @apply bg-transparent;
-    }
-</style>
