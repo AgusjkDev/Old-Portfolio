@@ -1,0 +1,60 @@
+---
+import Section from "./Section.astro";
+---
+
+<Section id="about" title="Sobre Mi" number="01">
+    <article
+        class="flex flex-col gap-4 font-calibre text-slate-400 sm:text-lg xl:w-3/4 xl:flex-row xl:gap-16"
+    >
+        <div class="flex max-w-lg flex-col gap-4 md:max-w-xl lg:max-w-[75ch] xl:flex-1">
+            <p>
+                ¡Hola! Mi nombre es Agustín Arnoldi, comencé esta gran aventura a inicios de 2020 y
+                está siendo increible. Siempre me agradó que otras personas puedan ver mis
+                creaciones y que se les haga de utilidad.
+            </p>
+
+            <p>
+                En el presente he estado analizando y estudiando una variedad de frameworks web,
+                pero mi conocimiento principal se centra en Next.js (React) por parte de la web y
+                Python como mi lenguaje convencional favorito.
+            </p>
+
+            <p>
+                También descubrí una gran pasión por enseñar a demás personas y transferir el
+                conocimiento que tengo, así mismo fortaleciendolo indirectamente.
+            </p>
+
+            <h3>Aquí algunas de las tecnologías que he usado recientemente:</h3>
+
+            <ul class="mx-auto -mt-1 grid grid-cols-2 gap-y-2 gap-x-8 font-sfmono text-sm">
+                {
+                    [
+                        "JavaScript",
+                        "TypeScript",
+                        "React",
+                        "TailwindCSS",
+                        "Next.js",
+                        "Node.js",
+                        "Astro",
+                        "Python",
+                    ].map(tech => <li class="decoration-triangle">{tech}</li>)
+                }
+            </ul>
+        </div>
+
+        <div class="mx-auto flex max-w-lg flex-col gap-4 md:max-w-xl lg:max-w-[75ch] xl:flex-1">
+            <p>
+                Actualmente me encuentro en una escuela secundaria técnica, en mi último año como
+                técnico de informática profesional y personal.
+            </p>
+
+            <img alt="Yo" src="/imgs/me.webp" class="mx-auto w-64 rounded lg:w-72 2xl:w-80" />
+        </div>
+    </article>
+</Section>
+
+<style>
+    .decoration-triangle::before {
+        @apply mr-2 text-sky-400 content-["▹"];
+    }
+</style>
