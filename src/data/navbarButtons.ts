@@ -1,20 +1,20 @@
-const navbarAnchors: NavbarAnchor[] = [
+const navbarButtons: NavbarButton[] = [
     {
-        href: "#about",
+        section: "about",
         children: "Sobre Mi",
     },
     {
-        href: "#skills",
+        section: "skills",
         children: "Habilidades",
     },
     {
-        href: "#projects",
+        section: "projects",
         children: "Proyectos",
     },
     {
-        href: "#contact",
+        section: "contact",
         children: "Contacto",
     },
 ];
 
-export default navbarAnchors;
+export default navbarButtons;

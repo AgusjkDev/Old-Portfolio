@@ -1,5 +1,5 @@
-type NavbarAnchor = {
-    href: string;
+type NavbarButton = {
+    section: string;
     children: string;
 };
 

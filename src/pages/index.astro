@@ -43,3 +43,17 @@ import "styles/globals.css";
         }
     }
 </style>
+
+<script type="module" defer>
+    const headerHeight = document.querySelector("header").offsetHeight;
+    const sections = {
+        about: document.querySelector("#about").getBoundingClientRect().top,
+    };
+
+    [...document.querySelectorAll(".menu-button"), document.querySelector("#about-arrow")].forEach(
+        elem =>
+            elem.addEventListener("click", e => {
+                window.scrollTo(0, sections[e.currentTarget.id.split("-").at(0)] - headerHeight);
+            })
+    );
+</script>

@@ -33,6 +33,7 @@
 html {
     scrollbar-width: thin;
     scrollbar-color: #94a3b8 transparent;
+    scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
