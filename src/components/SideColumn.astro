@@ -3,7 +3,7 @@ const { orientation } = Astro.props as SideColumnProps;
 ---
 
 <div
-    class={`animate-fade-in-up hidden md:block fixed bottom-0 ${
+    class={`z-[1] animate-fade-in-up hidden md:block fixed bottom-0 ${
         orientation === "left" ? "left-12" : "right-12"
     }`}
 >
