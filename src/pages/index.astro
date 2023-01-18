@@ -45,15 +45,19 @@ import "styles/globals.css";
 </style>
 
 <script type="module" defer>
-    const headerHeight = document.querySelector("header").offsetHeight;
-    const sections = {
-        about: document.querySelector("#about").getBoundingClientRect().top,
-    };
+    const elems = [
+        ...document.querySelectorAll(".navbar-button"),
+        document.querySelector("#about-arrow"),
+    ];
 
-    [...document.querySelectorAll(".menu-button"), document.querySelector("#about-arrow")].forEach(
-        elem =>
-            elem.addEventListener("click", e => {
-                window.scrollTo(0, sections[e.currentTarget.id.split("-").at(0)] - headerHeight);
-            })
+    function scrollIntoSection(sectionId) {
+        const sectionTop = document.querySelector(`#${sectionId}`).offsetTop;
+        const headerHeight = document.querySelector("header").offsetHeight;
+
+        window.scrollTo(0, sectionTop - headerHeight);
+    }
+
+    elems.forEach(elem =>
+        elem.addEventListener("click", e => scrollIntoSection(e.currentTarget.id.split("-").at(0)))
     );
 </script>
