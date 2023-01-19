@@ -58,6 +58,8 @@ import "styles/globals.css";
     }
 
     elems.forEach(elem =>
-        elem.addEventListener("click", e => scrollIntoSection(e.currentTarget.id.split("-").at(0)))
+        elem.addEventListener("click", e =>
+            scrollIntoSection(e.currentTarget.getAttribute("data-section-id"))
+        )
     );
 </script>
