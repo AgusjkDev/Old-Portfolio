@@ -45,10 +45,7 @@ import "styles/globals.css";
 </style>
 
 <script type="module" defer>
-    const elems = [
-        ...document.querySelectorAll(".navbar-button"),
-        document.querySelector("#about-arrow"),
-    ];
+    const $elems = document.querySelectorAll("[data-section-id]");
 
     function scrollIntoSection(sectionId) {
         const sectionTop = document.querySelector(`#${sectionId}`).offsetTop;
@@ -57,8 +54,8 @@ import "styles/globals.css";
         window.scrollTo(0, sectionTop - headerHeight);
     }
 
-    elems.forEach(elem =>
-        elem.addEventListener("click", e =>
+    $elems.forEach($elem =>
+        $elem.addEventListener("click", e =>
             scrollIntoSection(e.currentTarget.getAttribute("data-section-id"))
         )
     );

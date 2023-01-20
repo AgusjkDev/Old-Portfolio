@@ -19,25 +19,25 @@ import ResumeButton from "./ResumeButton.astro";
 <script type="module">
     const breakpoint = 768;
     const mediaQuery = window.matchMedia(`(min-width: ${breakpoint}px)`);
-    const menu = document.querySelector("#menu");
-    const elems = [
+    const $menu = document.querySelector("#menu");
+    const $elems = [
         document.querySelector("#menuButton"),
         document.querySelector("#closeMenu"),
-        ...document.querySelectorAll(".navbar-button"),
+        ...document.querySelectorAll("[data-section-id]"),
     ];
 
     function toggleMenu() {
-        menu.classList.toggle("opacity-0");
-        menu.classList.toggle("translate-x-[100vw]");
+        $menu.classList.toggle("opacity-0");
+        $menu.classList.toggle("translate-x-[100vw]");
         document.body.classList.toggle("overflow-y-hidden");
     }
 
     function handleEventListeners(matches) {
         if (matches) {
-            return elems.forEach(elem => elem.removeEventListener("click", toggleMenu));
+            return $elems.forEach($elem => $elem.removeEventListener("click", toggleMenu));
         }
 
-        elems.forEach(elem => elem.addEventListener("click", toggleMenu));
+        $elems.forEach($elem => $elem.addEventListener("click", toggleMenu));
     }
 
     handleEventListeners(document.documentElement.clientWidth >= breakpoint);
