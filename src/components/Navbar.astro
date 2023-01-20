@@ -9,6 +9,7 @@ import { navbarButtons } from "data";
     {
         navbarButtons.map(({ section, children }, i) => (
             <button
+                data-navbar-button
                 data-section-id={section}
                 class="font-sfmono flex flex-col items-center text-center text-lg font-medium text-neutral-300 transition-colors duration-300 hover:text-sky-400 md:flex-row md:items-center md:gap-1 md:text-xs"
             >

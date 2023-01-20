@@ -45,7 +45,10 @@ import "styles/globals.css";
 </style>
 
 <script type="module" defer>
-    const $elems = document.querySelectorAll("[data-section-id]");
+    const $elems = [
+        ...document.querySelectorAll("[data-navbar-button]"),
+        document.querySelector("[data-hero-arrow]"),
+    ];
 
     function scrollIntoSection(sectionId) {
         const sectionTop = document.querySelector(`#${sectionId}`).offsetTop;
