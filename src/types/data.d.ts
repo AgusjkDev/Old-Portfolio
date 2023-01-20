@@ -6,8 +6,5 @@ type NavbarButton = {
 type Social = {
     name: string;
     href: string;
-    viewBox: string;
-    paths: {
-        d: string;
-    }[];
+    svg: SVG;
 };

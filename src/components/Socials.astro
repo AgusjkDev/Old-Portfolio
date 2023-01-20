@@ -5,7 +5,7 @@ import { socials } from "data";
 
 <SideColumn orientation="left">
     {
-        socials.map(({ name, href, viewBox, paths }) => (
+        socials.map(({ name, href, svg }) => (
             <a
                 aria-label={name}
                 title={`¡Contáctame vía ${name}!`}
@@ -17,9 +17,9 @@ import { socials } from "data";
                     xmlns="http://www.w3.org/2000/svg"
                     width="24px"
                     height="24px"
-                    viewBox={viewBox}
+                    viewBox={svg.viewBox}
                 >
-                    {paths.map(({ d }) => (
+                    {svg.paths.map(({ d }) => (
                         <path
                             class="fill-slate-400 transition-colors duration-300"
                             fill-rule="evenodd"
