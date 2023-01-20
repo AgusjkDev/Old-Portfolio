@@ -4,3 +4,4 @@ export { default as Socials } from "./Socials.astro";
 export { default as Email } from "./Email.astro";
 export { default as Hero } from "./Hero.astro";
 export { default as About } from "./About.astro";
+export { default as Skills } from "./Skills.astro";

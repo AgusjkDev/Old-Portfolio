@@ -8,3 +8,11 @@ type Social = {
     href: string;
     svg: SVG;
 };
+
+type Skill = {
+    name: string;
+    technologies: {
+        name: string;
+        svg: SVG;
+    }[];
+};

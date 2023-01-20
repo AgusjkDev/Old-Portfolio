@@ -1,0 +1,103 @@
+---
+import Section from "./Section.astro";
+import { skills } from "data";
+---
+
+<Section id="skills" title="Habilidades" number="02">
+    <article class="flex w-full max-w-md flex-col gap-8 sm:max-w-lg xl:max-w-xl">
+        <div class="relative">
+            <div class="grid grid-cols-3 font-calibre text-lg font-medium">
+                {
+                    skills.map(({ name }, i) => (
+                        <button
+                            data-skill={name}
+                            data-active-skill={i === 0}
+                            class="border-b-2 border-b-slate-400 pt-4 pb-3 text-slate-400 transition-colors duration-300 hover:text-sky-400"
+                        >
+                            {name}
+                        </button>
+                    ))
+                }
+            </div>
+
+            <div data-skills-bar class="absolute bottom-0 h-[2px] bg-sky-400 transition-transform">
+            </div>
+        </div>
+
+        {
+            skills.map(({ name, technologies }) => (
+                <div data-skill-container={name} class="grid grid-cols-3 gap-x-4 gap-y-10">
+                    {technologies.map(({ name, svg }) => (
+                        <div class="flex flex-col items-center gap-2">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox={svg.viewBox}
+                                class="w-8 fill-slate-400"
+                            >
+                                {svg.paths.map(({ d }) => (
+                                    <path d={d} />
+                                ))}
+                            </svg>
+
+                            <p class="font-sfmono text-center text-sm text-slate-400">{name}</p>
+                        </div>
+                    ))}
+                </div>
+            ))
+        }
+    </article>
+</Section>
+
+<script type="module">
+    const $skills = [...document.querySelectorAll("[data-skill]")];
+    const $skillsBar = document.querySelector("[data-skills-bar]");
+    const $skillContainers = document.querySelectorAll("[data-skill-container]");
+    const activeClasses = ["text-sky-400"];
+    const inactiveClasses = ["text-slate-400", "hover:text-sky-400"];
+
+    function handleSkillsBar($skill) {
+        const skillWidth = $skill.getBoundingClientRect().width;
+        const skillIndex = $skills.findIndex(
+            $s => $s.getAttribute("data-skill") === $skill.getAttribute("data-skill")
+        );
+
+        $skillsBar.style.width = `${skillWidth}px`;
+        $skillsBar.style.transform = `translateX(${skillWidth * skillIndex}px)`;
+    }
+
+    function toggleActiveSkill($skill) {
+        const dataSkill = $skill.getAttribute("data-skill");
+
+        $skills.forEach($s => {
+            const isActive = $s.getAttribute("data-skill") === dataSkill;
+
+            $s.classList.remove(...(isActive ? inactiveClasses : activeClasses));
+            $s.classList.add(...(isActive ? activeClasses : inactiveClasses));
+
+            $s.dataset.activeSkill = isActive;
+        });
+
+        $skillContainers.forEach($sc => {
+            const isActive = $sc.getAttribute("data-skill-container") === dataSkill;
+
+            if (isActive) {
+                $sc.classList.remove("hidden");
+            } else {
+                $sc.classList.add("hidden");
+            }
+        });
+
+        handleSkillsBar($skill);
+    }
+
+    toggleActiveSkill($skills[0]); // Set the first skill as active by default.
+
+    $skills.forEach($skill => $skill.addEventListener("click", e => toggleActiveSkill(e.target)));
+
+    // When the window resizes, we need to update the $skillsBar width and translateX
+    window.addEventListener("resize", () => {
+        const $activeSkill = $skills.find($s => $s.getAttribute("data-active-skill") === "true");
+
+        handleSkillsBar($activeSkill);
+    });
+</script>
