@@ -16,3 +16,11 @@ type Skill = {
         svg: SVG;
     }[];
 };
+
+type Project = {
+    title: string;
+    url: string;
+    repository: string;
+    description: string;
+    technologies: string[];
+};
