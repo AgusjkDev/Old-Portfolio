@@ -26,18 +26,13 @@ import Section from "./Section.astro";
 
             <h3>Aquí algunas de las tecnologías que he usado recientemente:</h3>
 
-            <ul class="mx-auto -mt-1 grid grid-cols-2 gap-y-2 gap-x-8 font-sfmono text-sm">
+            <ul
+                class="mx-auto -mt-1 grid grid-cols-2 gap-y-2 gap-x-8 font-sfmono text-sm sm:grid-cols-3"
+            >
                 {
-                    [
-                        "JavaScript",
-                        "TypeScript",
-                        "React",
-                        "TailwindCSS",
-                        "Next.js",
-                        "Node.js",
-                        "Astro",
-                        "Python",
-                    ].map(tech => <li class="decoration-triangle">{tech}</li>)
+                    ["Astro", "React", "TailwindCSS", "Next.js", "Python", "TypeScript"].map(
+                        tech => <li class="decoration-triangle">{tech}</li>
+                    )
                 }
             </ul>
         </div>
@@ -48,7 +43,11 @@ import Section from "./Section.astro";
                 técnico de informática profesional y personal.
             </p>
 
-            <img alt="Yo" src="/imgs/me.webp" class="mx-auto w-64 rounded lg:w-72 2xl:w-80" />
+            <img
+                alt="Programando un menú de consola con Python en el taller."
+                src="/imgs/me.webp"
+                class="mx-auto w-64 rounded lg:w-72 2xl:w-80"
+            />
         </div>
     </article>
 </Section>
