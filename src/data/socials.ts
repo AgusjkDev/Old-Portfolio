@@ -37,7 +37,7 @@ const socials: Social[] = [
     },
     {
         name: "GitHub",
-        href: "https://github.com/AgusjkDev",
+        href: "https://github.com/agusjkdev",
         svg: {
             viewBox: "0 0 24 24",
             paths: [
