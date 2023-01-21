@@ -34,9 +34,7 @@ import { skills } from "data";
                                 viewBox={svg.viewBox}
                                 class="w-8 fill-slate-400"
                             >
-                                {svg.paths.map(({ d }) => (
-                                    <path d={d} />
-                                ))}
+                                <path d={svg.path} />
                             </svg>
 
                             <p class="font-sfmono text-center text-sm text-slate-400">{name}</p>

@@ -1,6 +1,7 @@
 ---
 import Navbar from "./Navbar.astro";
 import ResumeButton from "./ResumeButton.astro";
+import { closeMenu } from "data/svgs";
 ---
 
 <aside
@@ -8,7 +9,13 @@ import ResumeButton from "./ResumeButton.astro";
     class="fixed inset-0 z-[2] flex translate-x-[100vw] flex-col items-center justify-around bg-slate-800/[0.975] py-20 opacity-0 transition-all duration-500 md:hidden"
 >
     <button id="closeMenu" aria-label="Cerrar Menu">
-        <img alt="Cerrar Menu" src="/imgs/close.svg" decoding="async" fetchpriority="high" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox={closeMenu.viewBox}
+            class="h-11 w-11 fill-slate-400"
+        >
+            <path d={closeMenu.path}></path>
+        </svg>
     </button>
 
     <Navbar />

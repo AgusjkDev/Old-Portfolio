@@ -1,5 +1,6 @@
 ---
 import Navbar from "./Navbar.astro";
+import { openMenu } from "data/svgs";
 ---
 
 <header
@@ -7,7 +8,13 @@ import Navbar from "./Navbar.astro";
 >
     <!-- Only visible for smaller devices -->
     <button id="menuButton" aria-label="Abrir Menu" class="md:hidden">
-        <img alt="Abrir Menu" src="/imgs/menu.svg" decoding="async" fetchpriority="high" />
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox={openMenu.viewBox}
+            class="h-11 w-11 fill-slate-400"
+        >
+            <path d={openMenu.path}></path>
+        </svg>
     </button>
 
     <!-- Only visible for larger devices -->

@@ -1,3 +1,7 @@
+---
+import { arrowDown } from "data/svgs";
+---
+
 <main class="flex min-h-screen flex-col justify-center gap-3 pt-24">
     <h3 class="animate-fade-in font-sfmono text-sky-400">
         Hola, <span>me llamo</span>
@@ -30,14 +34,10 @@
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="rotate-180 fill-slate-400 transition-colors duration-300"
-                width="48px"
-                height="48px"
-                viewBox="0 0 50 50"
+                viewBox={arrowDown.viewBox}
+                class="h-12 w-12 rotate-180 fill-slate-400 transition-colors duration-300"
             >
-                <path
-                    d="M 25 1.015625 L 14.308594 11.28125 C 14.046875 11.527344 13.9375 11.894531 14.023438 12.242188 C 14.109375 12.589844 14.375 12.867188 14.71875 12.964844 C 15.066406 13.066406 15.4375 12.972656 15.691406 12.71875 L 24 4.746094 L 24 48 C 23.996094 48.359375 24.183594 48.695313 24.496094 48.878906 C 24.808594 49.058594 25.191406 49.058594 25.503906 48.878906 C 25.816406 48.695313 26.003906 48.359375 26 48 L 26 4.746094 L 34.308594 12.71875 C 34.5625 12.972656 34.933594 13.066406 35.28125 12.964844 C 35.625 12.867188 35.890625 12.589844 35.976563 12.242188 C 36.0625 11.894531 35.953125 11.527344 35.691406 11.28125 Z"
-                ></path>
+                <path d={arrowDown.path}></path>
             </svg>
         </button>
     </div>

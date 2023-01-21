@@ -14,19 +14,12 @@ import { socials } from "data";
                 rel="noopener noreferrer"
                 class={`transition-transform duration-300 hover:-translate-y-1 social-${name.toLowerCase()}`}
             >
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24px"
-                    height="24px"
-                    viewBox={svg.viewBox}
-                >
-                    {svg.paths.map(({ d }) => (
-                        <path
-                            class="fill-slate-400 transition-colors duration-300"
-                            fill-rule="evenodd"
-                            d={d}
-                        />
-                    ))}
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox={svg.viewBox} class="h-6 w-6">
+                    <path
+                        class="fill-slate-400 transition-colors duration-300"
+                        fill-rule="evenodd"
+                        d={svg.path}
+                    />
                 </svg>
             </a>
         ))
