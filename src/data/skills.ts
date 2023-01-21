@@ -186,7 +186,7 @@ const skills: Skill[] = [
         ],
     },
     {
-        name: "Other",
+        name: "Otros",
         technologies: [
             {
                 name: "Adobe Photoshop",
