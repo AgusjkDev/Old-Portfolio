@@ -2,7 +2,7 @@
 const { id, title, number } = Astro.props as SectionProps;
 ---
 
-<section id={id} class="animate-fade-in flex w-full flex-col items-center gap-6 pb-16">
+<section id={id} class="animate-fade-in flex w-full flex-col items-center gap-6 pb-32">
     <h2 class="mx-auto flex items-center gap-1 font-sfmono text-2xl font-semibold text-slate-50">
         <span class="font-sfmono text-sky-400">{number}.</span>{title}
     </h2>
