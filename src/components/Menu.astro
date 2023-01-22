@@ -5,7 +5,7 @@ import { closeMenu } from "data/svgs";
 
 <aside
     id="menu"
-    class="fixed inset-0 z-[2] flex translate-x-[100vw] flex-col items-center justify-around bg-slate-800/[0.975] py-20 opacity-0 transition-all duration-500 md:hidden"
+    class="fixed inset-0 z-[2] flex translate-x-full flex-col items-center justify-center gap-10 bg-slate-800/[0.975] opacity-0 transition-all duration-500 md:hidden"
 >
     <button id="closeMenu" aria-label="Cerrar Menu">
         <svg
@@ -32,7 +32,7 @@ import { closeMenu } from "data/svgs";
 
     function toggleMenu() {
         $menu.classList.toggle("opacity-0");
-        $menu.classList.toggle("translate-x-[100vw]");
+        $menu.classList.toggle("translate-x-full");
         document.body.classList.toggle("overflow-y-hidden");
     }
 
