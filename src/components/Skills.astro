@@ -4,15 +4,17 @@ import { skills } from "data";
 ---
 
 <Section id="skills" title="Habilidades" number="02">
-    <article class="flex w-full max-w-md flex-col gap-8 sm:max-w-lg xl:max-w-xl">
+    <article
+        class="mx-auto flex w-full max-w-lg flex-col gap-8 sm:max-w-xl xl:max-w-2xl 2xl:max-w-3xl"
+    >
         <div class="relative">
-            <div class="grid grid-cols-3 text-lg font-medium">
+            <div class="flex border-b-2 border-slate-400 text-lg font-medium">
                 {
                     skills.map(({ name }, i) => (
                         <button
                             data-skill={name}
-                            data-active-skill={i === 0}
-                            class="border-b-2 border-b-slate-400 pt-4 pb-3 transition-colors duration-300 hover:text-sky-400"
+                            data-skill-index={i}
+                            class="flex-1 pb-3 pt-4 md:pt-5 md:pb-4"
                         >
                             {name}
                         </button>
@@ -26,7 +28,7 @@ import { skills } from "data";
 
         {
             skills.map(({ name, technologies }) => (
-                <div data-skill-container={name} class="grid grid-cols-3 gap-x-4 gap-y-10">
+                <div data-skill-container={name} class="grid grid-cols-3 gap-y-10">
                     {technologies.map(({ name, svg }) => (
                         <div class="flex flex-col items-center gap-2">
                             <svg
@@ -55,9 +57,7 @@ import { skills } from "data";
 
     function handleSkillsBar($skill) {
         const skillWidth = $skill.getBoundingClientRect().width;
-        const skillIndex = $skills.findIndex(
-            $s => $s.getAttribute("data-skill") === $skill.getAttribute("data-skill")
-        );
+        const skillIndex = $skill.getAttribute("data-skill-index");
 
         $skillsBar.style.width = `${skillWidth}px`;
         $skillsBar.style.transform = `translateX(${skillWidth * skillIndex}px)`;
@@ -67,18 +67,18 @@ import { skills } from "data";
         const dataSkill = $skill.getAttribute("data-skill");
 
         $skills.forEach($s => {
-            const isActive = $s.getAttribute("data-skill") === dataSkill;
+            const isCurrentSkill = $s.getAttribute("data-skill") === dataSkill;
 
-            $s.classList.remove(...(isActive ? inactiveClasses : activeClasses));
-            $s.classList.add(...(isActive ? activeClasses : inactiveClasses));
+            $s.classList.remove(...(isCurrentSkill ? inactiveClasses : activeClasses));
+            $s.classList.add(...(isCurrentSkill ? activeClasses : inactiveClasses));
 
-            $s.dataset.activeSkill = isActive;
+            $s.dataset.activeSkill = isCurrentSkill;
         });
 
         $skillContainers.forEach($sc => {
-            const isActive = $sc.getAttribute("data-skill-container") === dataSkill;
+            const isCurrentSkillContainer = $sc.getAttribute("data-skill-container") === dataSkill;
 
-            if (isActive) {
+            if (isCurrentSkillContainer) {
                 $sc.classList.remove("hidden");
             } else {
                 $sc.classList.add("hidden");
