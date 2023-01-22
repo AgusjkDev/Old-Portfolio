@@ -6,13 +6,13 @@ import { skills } from "data";
 <Section id="skills" title="Habilidades" number="02">
     <article class="flex w-full max-w-md flex-col gap-8 sm:max-w-lg xl:max-w-xl">
         <div class="relative">
-            <div class="grid grid-cols-3 font-calibre text-lg font-medium">
+            <div class="grid grid-cols-3 text-lg font-medium">
                 {
                     skills.map(({ name }, i) => (
                         <button
                             data-skill={name}
                             data-active-skill={i === 0}
-                            class="border-b-2 border-b-slate-400 pt-4 pb-3 text-slate-400 transition-colors duration-300 hover:text-sky-400"
+                            class="border-b-2 border-b-slate-400 pt-4 pb-3 transition-colors duration-300 hover:text-sky-400"
                         >
                             {name}
                         </button>
@@ -37,7 +37,7 @@ import { skills } from "data";
                                 <path d={svg.path} />
                             </svg>
 
-                            <p class="font-sfmono text-center text-sm text-slate-400">{name}</p>
+                            <p class="font-sfmono text-center text-sm">{name}</p>
                         </div>
                     ))}
                 </div>
@@ -51,7 +51,7 @@ import { skills } from "data";
     const $skillsBar = document.querySelector("[data-skills-bar]");
     const $skillContainers = document.querySelectorAll("[data-skill-container]");
     const activeClasses = ["text-sky-400"];
-    const inactiveClasses = ["text-slate-400", "hover:text-sky-400"];
+    const inactiveClasses = ["hover:text-sky-400"];
 
     function handleSkillsBar($skill) {
         const skillWidth = $skill.getBoundingClientRect().width;
