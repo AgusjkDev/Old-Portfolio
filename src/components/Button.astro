@@ -1,0 +1,16 @@
+---
+const { title, href, download, classes } = Astro.props as ButtonProps;
+---
+
+<a
+    title={title}
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    download={download ? "" : false}
+    class={`mx-auto rounded border-[1px] border-sky-400 px-4 py-3 font-sfmono text-xs text-sky-400 transition-colors duration-300 hover:bg-sky-900 md:px-3.5 md:py-2.5 ${
+        classes ? ` ${classes}` : ""
+    }`}
+>
+    <slot />
+</a>

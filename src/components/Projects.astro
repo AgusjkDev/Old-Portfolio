@@ -1,5 +1,6 @@
 ---
 import Section from "./Section.astro";
+import Button from "./Button.astro";
 import { projects } from "data";
 import { externalLink, gitHubFilled } from "data/svgs";
 ---
@@ -15,38 +16,35 @@ import { externalLink, gitHubFilled } from "data/svgs";
                                 {title}
                             </h3>
 
-                            <div class="flex gap-2 [&_svg]:w-6 [&_svg]:fill-slate-300">
-                                <a
-                                    aria-label={`Enlace a ${title}`}
-                                    href={url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:[&>svg]:fill-sky-400"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox={externalLink.viewBox}
-                                        class="transition-colors duration-300"
+                            <div class="flex h-6 gap-2">
+                                {[
+                                    {
+                                        ariaLabel: `Enlace a ${title}`,
+                                        href: url,
+                                        svg: externalLink,
+                                    },
+                                    {
+                                        ariaLabel: `Enlace al repositorio de ${title}`,
+                                        href: repository,
+                                        svg: gitHubFilled,
+                                    },
+                                ].map(({ ariaLabel, href, svg }) => (
+                                    <a
+                                        aria-label={ariaLabel}
+                                        href={href}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="aspect-square h-full hover:[&>svg]:fill-sky-400"
                                     >
-                                        <path d={externalLink.path} />
-                                    </svg>
-                                </a>
-
-                                <a
-                                    aria-label={`Enlace al repositorio de ${title}`}
-                                    href={repository}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    class="hover:[&>svg]:fill-sky-400"
-                                >
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox={gitHubFilled.viewBox}
-                                        class="transition-colors duration-300"
-                                    >
-                                        <path d={gitHubFilled.path} />
-                                    </svg>
-                                </a>
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox={svg.viewBox}
+                                            class="fill-slate-300 transition-colors duration-300"
+                                        >
+                                            <path d={svg.path} />
+                                        </svg>
+                                    </a>
+                                ))}
                             </div>
                         </div>
 
@@ -61,14 +59,13 @@ import { externalLink, gitHubFilled } from "data/svgs";
                         </div>
                     </div>
 
-                    <a
+                    <Button
+                        title="¡Lee más sobre éste proyecto en GitHub!"
                         href={`${repository}#readme`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        class="font-sfmono mx-auto mt-16 rounded border-[1px] border-sky-400 p-3 text-xs text-sky-400 transition-colors duration-300 hover:bg-sky-900 sm:mt-0"
+                        classes="mt-16 sm:mt-0"
                     >
-                        Leer más
-                    </a>
+                        Leer Más
+                    </Button>
                 </div>
             ))
         }

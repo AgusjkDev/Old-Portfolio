@@ -1,5 +1,5 @@
 ---
-import ResumeButton from "./ResumeButton.astro";
+import Button from "./Button.astro";
 import { navbarButtons } from "data";
 ---
 
@@ -11,7 +11,7 @@ import { navbarButtons } from "data";
             <button
                 data-navbar-button
                 data-section-id={section}
-                class="font-sfmono flex flex-col items-center text-center text-lg font-medium text-neutral-300 transition-colors duration-300 hover:text-sky-400 md:flex-row md:items-center md:gap-1 md:text-xs"
+                class="font-sfmono flex flex-col items-center text-center text-sm text-neutral-300 transition-colors duration-300 hover:text-sky-400 md:flex-row md:items-center md:gap-1 md:text-xs"
             >
                 <span class="text-sm text-sky-400 md:text-xs">0{i + 1}.</span>
                 {children}
@@ -19,8 +19,7 @@ import { navbarButtons } from "data";
         ))
     }
 
-    <!-- Only visible for larger devices -->
-    <div class="hidden md:block">
-        <ResumeButton />
-    </div>
+    <Button title="¡Descarga mi Curriculum Vitae!" href="/arnoldi-agustin-cv.pdf" download>
+        Curriculum Vitae
+    </Button>
 </nav>
