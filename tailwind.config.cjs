@@ -62,25 +62,23 @@ module.exports = {
     plugins: [
         plugin(({ addUtilities, _, e }) => {
             const [from, to, incrementBy] = [0, 2000, 250];
+            const values = Array.from(
+                { length: (to - from) / incrementBy + 1 },
+                (_, i) => from + incrementBy * i
+            );
 
-            let values = [];
-            for (let i = from; i <= to; i += incrementBy) {
-                values.push(i);
-            }
-
-            let animationProperties = {};
-            values.forEach(value => {
-                const key = value > 0 ? value : "none";
-
-                animationProperties = Object.assign({}, animationProperties, {
-                    [`.${e(`animation-duration-${key}`)}`]: {
+            const animationProperties = values.reduce(
+                (acc, value) => ({
+                    ...acc,
+                    [`.${e(`animation-duration-${value}`)}`]: {
                         animationDuration: `${value}ms`,
                     },
-                    [`.${e(`animation-delay-${key}`)}`]: {
+                    [`.${e(`animation-delay-${value}`)}`]: {
                         animationDelay: `${value}ms`,
                     },
-                });
-            });
+                }),
+                {}
+            );
 
             addUtilities(animationProperties);
         }),
