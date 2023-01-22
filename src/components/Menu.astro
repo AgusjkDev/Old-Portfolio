@@ -4,10 +4,10 @@ import { closeMenu } from "data/svgs";
 ---
 
 <aside
-    id="menu"
+    data-menu
     class="fixed inset-0 z-[2] flex translate-x-full flex-col items-center justify-center gap-10 bg-slate-800/[0.975] opacity-0 transition-all duration-500 md:hidden"
 >
-    <button id="closeMenu" aria-label="Cerrar Menu">
+    <button data-close-menu aria-label="Cerrar Menu">
         <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox={closeMenu.viewBox}
@@ -23,10 +23,10 @@ import { closeMenu } from "data/svgs";
 <script type="module">
     const breakpoint = 768;
     const mediaQuery = window.matchMedia(`(min-width: ${breakpoint}px)`);
-    const $menu = document.querySelector("#menu");
+    const $menu = document.querySelector("[data-menu]");
     const $elems = [
-        document.querySelector("#menuButton"),
-        document.querySelector("#closeMenu"),
+        document.querySelector("[data-open-menu]"),
+        document.querySelector("[data-close-menu]"),
         ...document.querySelectorAll("[data-navbar-button]"),
     ];
 

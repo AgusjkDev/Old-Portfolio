@@ -2,34 +2,36 @@
 import { arrowDown } from "data/svgs";
 ---
 
-<main class="flex min-h-screen flex-col justify-center gap-3 pt-24">
-    <h3
-        class="animate-fade-in font-sfmono text-sky-400 animation-delay-250 animation-duration-1000"
-    >
-        Hola, <span class="animate-fade-in animation-duration-1000 animation-delay-1000"
-            >me llamo</span
+<main class="flex min-h-screen flex-col justify-evenly">
+    <div class="flex flex-col justify-center gap-3 pt-28 md:max-w-xl lg:max-w-none">
+        <h3
+            class="animate-fade-in font-sfmono text-sky-400 animation-delay-250 animation-duration-1000"
         >
-    </h3>
+            Hola, <span class="animate-fade-in animation-duration-1000 animation-delay-1000"
+                >me llamo</span
+            >
+        </h3>
 
-    <h1
-        class="animate-fade-in font-calibre text-4xl font-semibold leading-none text-slate-50 animation-duration-1000 animation-delay-2000 sm:text-5xl lg:text-6xl xl:text-7xl"
-    >
-        Agustín Arnoldi.
-    </h1>
+        <h1
+            class="animate-fade-in font-calibre text-4xl font-semibold leading-none text-slate-50 animation-duration-1000 animation-delay-2000 sm:text-5xl lg:text-6xl xl:text-7xl"
+        >
+            Agustín Arnoldi.
+        </h1>
 
-    <h2
-        class="-mt-2 animate-fade-in font-calibre text-4xl font-semibold leading-none text-slate-400 sm:text-5xl lg:text-6xl xl:text-7xl"
-    >
-        Construyo cosas para la web
-    </h2>
+        <h2
+            class="animate-fade-in -mt-2 font-calibre text-4xl font-semibold leading-none text-slate-400 sm:text-5xl lg:text-6xl xl:text-7xl"
+        >
+            Construyo cosas para la web.
+        </h2>
 
-    <p class="max-w-md animate-fade-in font-calibre text-slate-400 sm:max-w-lg sm:text-lg">
-        Soy un desarrollador que busca superarse a diario. Interesado en vivir nuevas experiencias
-        en el rubro tecnológico. Actualmente estudiando y aspirando a ser un gran programador de la
-        nueva era.
-    </p>
+        <p class="animate-fade-in max-w-md font-calibre text-slate-400 sm:max-w-prose md:text-lg">
+            Soy un desarrollador que busca superarse a diario. Interesado en vivir nuevas
+            experiencias en el rubro tecnológico. Actualmente estudiando y aspirando a ser un gran
+            programador de la nueva era.
+        </p>
+    </div>
 
-    <div class="mx-auto mt-32 flex h-12 w-12">
+    <div class="mx-auto">
         <button
             data-hero-arrow
             data-section-id="about"

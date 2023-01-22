@@ -4,16 +4,20 @@ import { navbarButtons } from "data";
 ---
 
 <nav
-    class="flex flex-col items-center gap-10 md:flex-row md:justify-center md:gap-10 lg:gap-12 xl:gap-20 2xl:gap-24"
+    class="flex flex-col items-center gap-10 md:mx-auto md:max-w-3xl md:flex-row md:justify-around md:gap-0 lg:max-w-4xl xl:max-w-5xl"
 >
     {
         navbarButtons.map(({ section, children }, i) => (
             <button
                 data-navbar-button
                 data-section-id={section}
-                class="font-sfmono flex flex-col items-center text-center text-sm text-neutral-300 transition-colors duration-300 hover:text-sky-400 md:flex-row md:items-center md:gap-1 md:text-xs"
+                class="font-sfmono flex flex-col text-slate-300 transition-colors duration-300 hover:text-sky-400 md:mx-auto md:flex-row md:gap-1 md:text-xs"
             >
-                <span class="text-sm text-sky-400 md:text-xs">0{i + 1}.</span>
+                <span class="mx-auto text-sm text-sky-400 md:text-xs">
+                    {`${(i + 1).toLocaleString("en-US", {
+                        minimumIntegerDigits: 2,
+                    })}.`}
+                </span>
                 {children}
             </button>
         ))
