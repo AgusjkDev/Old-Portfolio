@@ -3,23 +3,27 @@ import { arrowDown } from "data/svgs";
 ---
 
 <main class="flex min-h-screen flex-col justify-center gap-3 pt-24">
-    <h3 class="animate-fade-in font-sfmono text-sky-400">
-        Hola, <span>me llamo</span>
+    <h3
+        class="animate-fade-in font-sfmono text-sky-400 animation-delay-250 animation-duration-1000"
+    >
+        Hola, <span class="animate-fade-in animation-duration-1000 animation-delay-1000"
+            >me llamo</span
+        >
     </h3>
 
     <h1
-        class="animate-fade-in font-calibre text-4xl font-semibold leading-none text-slate-50 sm:text-5xl lg:text-6xl xl:text-7xl"
+        class="animate-fade-in font-calibre text-4xl font-semibold leading-none text-slate-50 animation-duration-1000 animation-delay-2000 sm:text-5xl lg:text-6xl xl:text-7xl"
     >
         Agustín Arnoldi.
     </h1>
 
     <h2
-        class="animate-fade-in -mt-2 font-calibre text-4xl font-semibold leading-none text-slate-400 sm:text-5xl lg:text-6xl xl:text-7xl"
+        class="-mt-2 animate-fade-in font-calibre text-4xl font-semibold leading-none text-slate-400 sm:text-5xl lg:text-6xl xl:text-7xl"
     >
         Construyo cosas para la web
     </h2>
 
-    <p class="animate-fade-in max-w-md font-calibre text-slate-400 sm:max-w-lg sm:text-lg">
+    <p class="max-w-md animate-fade-in font-calibre text-slate-400 sm:max-w-lg sm:text-lg">
         Soy un desarrollador que busca superarse a diario. Interesado en vivir nuevas experiencias
         en el rubro tecnológico. Actualmente estudiando y aspirando a ser un gran programador de la
         nueva era.
@@ -30,7 +34,7 @@ import { arrowDown } from "data/svgs";
             data-hero-arrow
             data-section-id="about"
             aria-label="Ir a Sobre Mi"
-            class="animate-fade-in animate-floating [&>svg]:hover:fill-sky-400"
+            class="animate-arrow [&>svg]:hover:fill-sky-400"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,36 +46,3 @@ import { arrowDown } from "data/svgs";
         </button>
     </div>
 </main>
-
-<style>
-    h3.animate-fade-in {
-        animation: fade-in 1s 0.25s both;
-    }
-
-    h3.animate-fade-in > span {
-        animation: fade-in 1s 1s both;
-    }
-
-    h1.animate-fade-in {
-        animation: fade-in 1s 2s both;
-    }
-
-    h2.animate-fade-in,
-    p.animate-fade-in {
-        animation: fade-in 2s 3s both;
-    }
-
-    button.animate-fade-in.animate-floating {
-        transform: translateY(-15%);
-        animation: fade-in 2.5s 3s both, floating 1.5s infinite;
-    }
-
-    @keyframes floating {
-        0% {
-            transform: translateY(-15%);
-        }
-        50% {
-            transform: translateY(15%);
-        }
-    }
-</style>

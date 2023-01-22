@@ -17,21 +17,3 @@ const { orientation } = Astro.props as SideColumnProps;
         @apply mx-auto mt-1 h-24 w-[1px] bg-slate-400 content-[""];
     }
 </style>
-
-<style>
-    .animate-fade-in-up {
-        animation: fade-in-up 1.25s 3s both;
-        @apply md:[animation-delay:2.5s];
-    }
-
-    @keyframes fade-in-up {
-        0% {
-            opacity: 0;
-            transform: translateY(125%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0%);
-        }
-    }
-</style>
