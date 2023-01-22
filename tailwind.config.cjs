@@ -57,6 +57,9 @@ module.exports = {
                 "fade-in-up": "fade-in-up 1.75s 2.5s both",
                 arrow: "fade-in 2.5s 3s both, floating 1.5s 3s infinite",
             },
+            maxWidth: {
+                "prose-lg": "75ch",
+            },
         },
     },
     plugins: [

@@ -3,8 +3,10 @@ import Section from "./Section.astro";
 ---
 
 <Section id="about" title="Sobre Mi" number="01">
-    <article class="flex flex-col gap-4 sm:text-lg xl:w-3/4 xl:flex-row xl:gap-16">
-        <div class="flex max-w-lg flex-col gap-4 md:max-w-xl lg:max-w-[75ch] xl:flex-1">
+    <article class="grid gap-3 md:text-lg xl:grid-cols-2 xl:gap-24 2xl:gap-28">
+        <div
+            class="mx-auto flex max-w-lg flex-col gap-3 sm:max-w-prose md:max-w-xl lg:max-w-prose-lg xl:max-w-md xl:justify-between xl:gap-0"
+        >
             <p>
                 ¡Hola! Mi nombre es Agustín Arnoldi, comencé esta gran aventura a inicios de 2020 y
                 está siendo increible. Siempre me agradó que otras personas puedan ver mis
@@ -13,29 +15,19 @@ import Section from "./Section.astro";
 
             <p>
                 En el presente he estado analizando y estudiando una variedad de frameworks web,
-                pero mi conocimiento principal se centra en Next.js (React) por parte de la web y
-                Python como mi lenguaje convencional favorito.
+                pero mi conocimiento principal se centra en Next.js por parte de la web y Python
+                como mi lenguaje convencional favorito.
             </p>
 
             <p>
                 También descubrí una gran pasión por enseñar a demás personas y transferir el
                 conocimiento que tengo, así mismo fortaleciendolo indirectamente.
             </p>
-
-            <h3>Aquí algunas de las tecnologías que he usado recientemente:</h3>
-
-            <ul
-                class="mx-auto -mt-1 grid grid-cols-2 gap-y-2 gap-x-8 font-sfmono text-sm sm:grid-cols-3"
-            >
-                {
-                    ["Astro", "React", "TailwindCSS", "Next.js", "Python", "TypeScript"].map(
-                        tech => <li class="decoration-triangle">{tech}</li>
-                    )
-                }
-            </ul>
         </div>
 
-        <div class="mx-auto flex max-w-lg flex-col gap-4 md:max-w-xl lg:max-w-[75ch] xl:flex-1">
+        <div
+            class="mx-auto flex max-w-lg flex-col gap-5 sm:max-w-prose md:max-w-xl lg:max-w-prose-lg xl:max-w-md"
+        >
             <p>
                 Actualmente me encuentro en una escuela secundaria técnica, en mi último año como
                 técnico de informática profesional y personal.
@@ -44,14 +36,8 @@ import Section from "./Section.astro";
             <img
                 alt="Programando un menú de consola con Python en el taller."
                 src="/imgs/me.webp"
-                class="mx-auto w-64 rounded lg:w-72 2xl:w-80"
+                class="mx-auto w-64 rounded-sm"
             />
         </div>
     </article>
 </Section>
-
-<style>
-    .decoration-triangle::before {
-        @apply mr-2 text-sky-400 content-["▹"];
-    }
-</style>
