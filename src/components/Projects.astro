@@ -9,7 +9,7 @@ import { externalLink, gitHubFilled } from "data/svgs";
     <article class="grid gap-12 lg:grid-cols-2 2xl:grid-cols-3">
         {
             projects.map(({ title, url, repository, description, technologies }) => (
-                <div class="flex max-w-sm flex-col justify-between rounded-sm bg-slate-700 p-7 sm:aspect-square">
+                <div class="flex max-w-sm flex-col justify-between rounded bg-slate-700 p-7 sm:aspect-square">
                     <div class="flex flex-col gap-4">
                         <div class="flex justify-between">
                             <h3 class="font-calibre text-2xl font-semibold text-slate-300">
@@ -48,11 +48,11 @@ import { externalLink, gitHubFilled } from "data/svgs";
                             </div>
                         </div>
 
-                        <p class="font-calibre text-slate-400">{description}</p>
+                        <p class="font-calibre text-slate-300">{description}</p>
 
                         <div class="flex flex-wrap justify-between gap-3">
                             {technologies.map(technology => (
-                                <p class="font-sfmono rounded-sm bg-slate-600 px-2 py-1.5 text-xs font-semibold text-slate-400">
+                                <p class="font-sfmono rounded-sm bg-slate-600 px-2 py-1.5 text-xs font-semibold text-slate-300">
                                     {technology}
                                 </p>
                             ))}
