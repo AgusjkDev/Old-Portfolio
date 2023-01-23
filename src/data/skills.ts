@@ -1,28 +1,4 @@
-import {
-    adobePhotoshop,
-    astro,
-    css,
-    excel,
-    express,
-    flask,
-    git,
-    gitHubFilled,
-    html,
-    javaScript,
-    JsonWebTokens,
-    mongoDb,
-    nextJs,
-    nodeJs,
-    postgreSql,
-    python,
-    reactJs,
-    swagger,
-    tailwindCss,
-    telerikFiddler,
-    typeScript,
-    viteJs,
-    webScrapping,
-} from "./svgs";
+import * as svgs from "./svgs";
 
 const skills: Skill[] = [
     {
@@ -30,39 +6,75 @@ const skills: Skill[] = [
         technologies: [
             {
                 name: "HTML",
-                svg: html,
+                svg: svgs.html,
+                hover: {
+                    fill: "group-hover:fill-html",
+                    text: "group-hover:text-html",
+                },
             },
             {
                 name: "CSS",
-                svg: css,
+                svg: svgs.css,
+                hover: {
+                    fill: "group-hover:fill-css",
+                    text: "group-hover:text-css",
+                },
             },
             {
                 name: "TailwindCSS",
-                svg: tailwindCss,
+                svg: svgs.tailwindCss,
+                hover: {
+                    fill: "group-hover:fill-tailwindcss",
+                    text: "group-hover:text-tailwindcss",
+                },
             },
             {
                 name: "JavaScript",
-                svg: javaScript,
+                svg: svgs.javaScript,
+                hover: {
+                    fill: "group-hover:fill-javascript",
+                    text: "group-hover:text-javascript",
+                },
             },
             {
                 name: "TypeScript",
-                svg: typeScript,
+                svg: svgs.typeScript,
+                hover: {
+                    fill: "group-hover:fill-typescript",
+                    text: "group-hover:text-typescript",
+                },
             },
             {
                 name: "Astro",
-                svg: astro,
+                svg: svgs.astro,
+                hover: {
+                    fill: "group-hover:fill-astro",
+                    text: "group-hover:text-astro",
+                },
             },
             {
                 name: "Vite.js",
-                svg: viteJs,
+                svg: svgs.viteJs,
+                hover: {
+                    fill: "group-hover:fill-vitejs",
+                    text: "group-hover:text-vitejs",
+                },
             },
             {
                 name: "React.js",
-                svg: reactJs,
+                svg: svgs.reactJs,
+                hover: {
+                    fill: "group-hover:fill-reactjs",
+                    text: "group-hover:text-reactjs",
+                },
             },
             {
                 name: "Next.js",
-                svg: nextJs,
+                svg: svgs.nextJs,
+                hover: {
+                    fill: "group-hover:fill-nextjs",
+                    text: "group-hover:text-nextjs",
+                },
             },
         ],
     },
@@ -71,31 +83,59 @@ const skills: Skill[] = [
         technologies: [
             {
                 name: "Node.js",
-                svg: nodeJs,
+                svg: svgs.nodeJs,
+                hover: {
+                    fill: "group-hover:fill-nodejs",
+                    text: "group-hover:text-nodejs",
+                },
             },
             {
                 name: "Express",
-                svg: express,
+                svg: svgs.express,
+                hover: {
+                    fill: "group-hover:fill-express",
+                    text: "group-hover:text-express",
+                },
             },
             {
                 name: "MongoDB",
-                svg: mongoDb,
+                svg: svgs.mongoDb,
+                hover: {
+                    fill: "group-hover:fill-mongodb",
+                    text: "group-hover:text-mongodb",
+                },
             },
             {
                 name: "Python",
-                svg: python,
+                svg: svgs.python,
+                hover: {
+                    fill: "group-hover:fill-python",
+                    text: "group-hover:text-python",
+                },
             },
             {
                 name: "Flask",
-                svg: flask,
+                svg: svgs.flask,
+                hover: {
+                    fill: "group-hover:fill-flask",
+                    text: "group-hover:text-flask",
+                },
             },
             {
                 name: "PostgreSQL",
-                svg: postgreSql,
+                svg: svgs.postgreSql,
+                hover: {
+                    fill: "group-hover:fill-postgresql",
+                    text: "group-hover:text-postgresql",
+                },
             },
             {
                 name: "JSON Web Tokens",
-                svg: JsonWebTokens,
+                svg: svgs.JsonWebTokens,
+                hover: {
+                    fill: "group-hover:fill-jsonwebtokens",
+                    text: "group-hover:text-jsonwebtokens",
+                },
             },
         ],
     },
@@ -104,31 +144,59 @@ const skills: Skill[] = [
         technologies: [
             {
                 name: "Adobe Photoshop",
-                svg: adobePhotoshop,
+                svg: svgs.adobePhotoshop,
+                hover: {
+                    fill: "group-hover:fill-adobephotoshop",
+                    text: "group-hover:text-adobephotoshop",
+                },
             },
             {
                 name: "Excel",
-                svg: excel,
+                svg: svgs.excel,
+                hover: {
+                    fill: "group-hover:fill-excel",
+                    text: "group-hover:text-excel",
+                },
             },
             {
                 name: "Git",
-                svg: git,
+                svg: svgs.git,
+                hover: {
+                    fill: "group-hover:fill-git",
+                    text: "group-hover:text-git",
+                },
             },
             {
                 name: "GitHub",
-                svg: gitHubFilled,
+                svg: svgs.gitHubFilled,
+                hover: {
+                    fill: "group-hover:fill-github",
+                    text: "group-hover:text-github",
+                },
             },
             {
                 name: "Swagger",
-                svg: swagger,
+                svg: svgs.swagger,
+                hover: {
+                    fill: "group-hover:fill-swagger",
+                    text: "group-hover:text-swagger",
+                },
             },
             {
                 name: "Telerik Fiddler",
-                svg: telerikFiddler,
+                svg: svgs.telerikFiddler,
+                hover: {
+                    fill: "group-hover:fill-telerikfiddler",
+                    text: "group-hover:text-telerikfiddler",
+                },
             },
             {
                 name: "Web Scrapping",
-                svg: webScrapping,
+                svg: svgs.webScrapping,
+                hover: {
+                    fill: "group-hover:fill-webscrapping",
+                    text: "group-hover:text-webscrapping",
+                },
             },
         ],
     },

@@ -3,7 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.astro"],
+    content: ["./src/**/*.{astro,ts}"],
     theme: {
         extend: {
             fontFamily: {
@@ -59,6 +59,38 @@ module.exports = {
             },
             maxWidth: {
                 "prose-lg": "75ch",
+            },
+            colors: {
+                whatsapp: "#25d366",
+                twitter: "#1da1f2",
+                instagram: "#de52b2",
+                github: "#f0f6fc",
+                linkedin: "#0e76a8",
+                html: "#e34f26",
+                css: "#1572b6",
+                tailwindcss: "#06b6d4",
+                javascript: "#f7df1e",
+                typescript: "#3178c6",
+                astro: "#ff5d01",
+                vitejs: "#646cff",
+                reactjs: "#61dafb",
+                nextjs: "#000000",
+                nodejs: "#339933",
+                express: "#000000",
+                mongodb: "#47a248",
+                python: "#3776ab",
+                flask: "#000000",
+                postgresql: "#4169e1",
+                jsonwebtokens: "#000000",
+                adobephotoshop: "#31a8ff",
+                excel: "#217346",
+                git: "#f05032",
+                swagger: "#85ea2d",
+                telerikfiddler: "#5ce500",
+                webscrapping: "#43b02a",
+            },
+            dropShadow: {
+                white: "0px 0px 10px #ffffff25",
             },
         },
     },

@@ -28,19 +28,23 @@ import { skills } from "data";
 
         {
             skills.map(({ name, technologies }) => (
-                <div data-skill-container={name} class="grid grid-cols-3 gap-y-10">
-                    {technologies.map(({ name, svg }) => (
-                        <div class="flex flex-col items-center gap-2">
+                <div data-skill-container={name} class="grid grid-cols-3 gap-y-12">
+                    {technologies.map(({ name, svg, hover }) => (
+                        <button class="group flex flex-col items-center gap-3 hover:cursor-pointer">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox={svg.viewBox}
-                                class="w-8 fill-slate-400"
+                                class={`${hover.fill} group-hover:drop-shadow-white w-8 fill-slate-400 transition-all duration-300`}
                             >
                                 <path d={svg.path} />
                             </svg>
 
-                            <p class="font-sfmono text-center text-sm">{name}</p>
-                        </div>
+                            <p
+                                class={`font-sfmono text-center text-xs font-semibold transition-all duration-300 group-hover:[text-shadow:0px_0px_10px_#ffffff50] ${hover.text}`}
+                            >
+                                {name}
+                            </p>
+                        </button>
                     ))}
                 </div>
             ))

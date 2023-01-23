@@ -5,18 +5,18 @@ import { socials } from "data";
 
 <SideColumn orientation="left">
     {
-        socials.map(({ name, href, svg }) => (
+        socials.map(({ name, href, svg, hover }) => (
             <a
                 aria-label={name}
                 title={`¡Contáctame vía ${name}!`}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                class={`transition-transform duration-300 hover:-translate-y-1 social-${name.toLowerCase()}`}
+                class="group transition-transform duration-300 hover:-translate-y-1"
             >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox={svg.viewBox} class="h-6 w-6">
                     <path
-                        class="fill-slate-400 transition-colors duration-300"
+                        class={`fill-slate-400 transition-colors duration-300 ${hover.fill}`}
                         fill-rule="evenodd"
                         d={svg.path}
                     />
@@ -25,25 +25,3 @@ import { socials } from "data";
         ))
     }
 </SideColumn>
-
-<style>
-    .social-whatsapp {
-        @apply [&>svg>path]:hover:fill-green-400;
-    }
-
-    .social-twitter {
-        @apply [&>svg>path]:hover:fill-sky-400;
-    }
-
-    .social-instagram {
-        @apply [&>svg>path]:hover:fill-pink-400;
-    }
-
-    .social-github {
-        @apply [&>svg>path]:hover:fill-white;
-    }
-
-    .social-linkedin {
-        @apply [&>svg>path]:hover:fill-blue-500;
-    }
-</style>

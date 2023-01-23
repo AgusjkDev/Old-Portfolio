@@ -7,6 +7,9 @@ type Social = {
     name: string;
     href: string;
     svg: SVG;
+    hover: {
+        fill: string;
+    };
 };
 
 type Skill = {
@@ -14,6 +17,10 @@ type Skill = {
     technologies: {
         name: string;
         svg: SVG;
+        hover: {
+            fill: string;
+            text: string;
+        };
     }[];
 };
 
