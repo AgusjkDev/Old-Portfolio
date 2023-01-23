@@ -63,7 +63,7 @@ module.exports = {
         },
     },
     plugins: [
-        plugin(({ addUtilities, _, e }) => {
+        plugin(({ addUtilities, e }) => {
             const [from, to, incrementBy] = [0, 2000, 250];
             const values = Array.from(
                 { length: (to - from) / incrementBy + 1 },
