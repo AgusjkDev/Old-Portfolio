@@ -102,18 +102,19 @@ module.exports = {
                 (_, i) => from + incrementBy * i
             );
 
-            const animationProperties = values.reduce(
-                (acc, value) => ({
+            const animationProperties = values.reduce((acc, value) => {
+                const key = value === 0 ? "none" : value;
+
+                return {
                     ...acc,
-                    [`.${e(`animation-duration-${value}`)}`]: {
+                    [`.${e(`animation-duration-${key}`)}`]: {
                         animationDuration: `${value}ms`,
                     },
-                    [`.${e(`animation-delay-${value}`)}`]: {
+                    [`.${e(`animation-delay-${key}`)}`]: {
                         animationDelay: `${value}ms`,
                     },
-                }),
-                {}
-            );
+                };
+            }, {});
 
             addUtilities(animationProperties);
         }),
