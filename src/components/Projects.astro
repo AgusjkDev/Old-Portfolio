@@ -2,7 +2,7 @@
 import Section from "./Section.astro";
 import Button from "./Button.astro";
 import { projects } from "data";
-import { externalLink, gitHubFilled } from "data/svgs";
+import { externalLink, gitHubFilledSmall } from "data/svgs";
 ---
 
 <Section id="projects" title="Proyectos" number="03">
@@ -24,7 +24,7 @@ import { externalLink, gitHubFilled } from "data/svgs";
                                     {
                                         ariaLabel: `Enlace al repositorio de ${title}`,
                                         href: repository,
-                                        svg: gitHubFilled,
+                                        svg: gitHubFilledSmall,
                                     },
                                 ].map(({ ariaLabel, href, svg }) => (
                                     <a
