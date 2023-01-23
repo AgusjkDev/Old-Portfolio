@@ -90,7 +90,7 @@ module.exports = {
                 webscrapping: "#43b02a",
             },
             dropShadow: {
-                white: "0px 0px 10px #ffffff25",
+                white: "0px 0px 5px #ffffff25",
             },
         },
     },
