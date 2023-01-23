@@ -20,7 +20,7 @@ const projects: Project[] = [
         url: "https://techsmemo.vercel.app",
         repository: "https://github.com/agusjkdev/technologies-memory-game",
         description:
-            "Como su nombre lo indica, éste es un juego de memoria, con el divertido detalle de que las cartas son tecnologías de todo tipo (+75).",
+            "Como su nombre lo indica, éste es un juego de memoria, con el divertido detalle de que las cartas son tecnologías de todo tipo. ¡También guardará tu récord de puntos!",
         technologies: ["React.js", "JavaScript", "Vite.js", "TailwindCSS"],
     },
     {
@@ -28,7 +28,7 @@ const projects: Project[] = [
         url: "https://arnoldiagustin.vercel.app",
         repository: "https://github.com/agusjkdev/portfolio",
         description:
-            "Éste proyecto, mi portafolio personal. Hecho con mucho amor y con una tecnología que nunca antes había usado, espero que te agrade :)",
+            "Éste proyecto, mi portafolio personal. Hecho con mucho amor y con una tecnología que nunca antes había usado, ¡espero que te agrade!",
         technologies: ["Astro", "TypeScript", "TailwindCSS"],
     },
     {
@@ -36,7 +36,7 @@ const projects: Project[] = [
         url: "https://poems-crud-backend.vercel.app/api/poems",
         repository: "https://github.com/agusjkdev/poems-crud-api",
         description:
-            "RESTful API para un CRUD de poemas. Cuenta con una robusta verificación de los datos proporcionados y también con paginación por cantidad de poemas.",
+            "RESTful API para un CRUD de poemas. Cuenta con una robusta verificación de los datos proporcionados y también paginación por cantidad de poemas.",
         technologies: ["Node.js", "Express", "JavaScript", "MongoDB"],
     },
     {
