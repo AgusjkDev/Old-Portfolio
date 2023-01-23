@@ -8,7 +8,7 @@ const { title, href, download, classes } = Astro.props as ButtonProps;
     target="_blank"
     rel="noopener noreferrer"
     download={download ? "" : false}
-    class={`mx-auto rounded border-[1px] border-sky-400 px-4 py-3 font-sfmono text-xs text-sky-400 transition-colors duration-300 hover:bg-sky-900 md:px-3.5 md:py-2.5 ${
+    class={`mx-auto [text-shadow:0px_0px_2px_#38bdf8] shadow-[0px_0px_2.5px_0px] shadow-sky-400 rounded border-[1px] border-sky-400 px-4 py-3 font-sfmono text-xs text-sky-400 transition-colors duration-300 hover:bg-sky-900 md:px-3.5 md:py-2.5 ${
         classes ? ` ${classes}` : ""
     }`}
 >
