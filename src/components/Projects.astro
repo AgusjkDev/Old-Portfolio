@@ -6,12 +6,12 @@ import { externalLink, gitHubFilledSmall } from "data/svgs";
 ---
 
 <Section id="projects" title="Proyectos" number="03">
-    <article class="mx-auto grid gap-12 lg:grid-cols-2 2xl:grid-cols-3">
+    <article class="mx-auto mt-2 grid gap-12 lg:grid-cols-2 xl:gap-16 2xl:grid-cols-3">
         {
             projects.map(({ title, url, repository, description, technologies }) => (
-                <div class="flex max-w-sm flex-col justify-between rounded bg-slate-700 p-7 sm:aspect-square">
+                <div class="hover:drop-shadow-white flex max-w-sm flex-col justify-between rounded bg-slate-700 p-7 transition-all duration-300 md:aspect-square">
                     <div class="flex flex-col gap-4">
-                        <div class="flex justify-between">
+                        <header class="flex justify-between">
                             <h3 class="text-2xl font-semibold text-slate-300">{title}</h3>
 
                             <div class="flex h-6 gap-2">
@@ -44,7 +44,7 @@ import { externalLink, gitHubFilledSmall } from "data/svgs";
                                     </a>
                                 ))}
                             </div>
-                        </div>
+                        </header>
 
                         <p class="text-slate-300">{description}</p>
 
@@ -60,7 +60,7 @@ import { externalLink, gitHubFilledSmall } from "data/svgs";
                     <Button
                         title="¡Lee más sobre éste proyecto en GitHub!"
                         href={`${repository}#readme`}
-                        classes="mt-16 sm:mt-0"
+                        classes="mt-16 md:mt-0"
                     >
                         Leer Más
                     </Button>
