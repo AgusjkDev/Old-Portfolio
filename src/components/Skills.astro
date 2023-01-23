@@ -4,9 +4,7 @@ import { skills } from "data";
 ---
 
 <Section id="skills" title="Habilidades" number="02">
-    <article
-        class="mx-auto flex w-full max-w-lg flex-col gap-8 sm:max-w-xl xl:max-w-2xl 2xl:max-w-3xl"
-    >
+    <article class="mx-auto flex w-full max-w-lg flex-col gap-2 sm:max-w-xl xl:max-w-2xl">
         <div class="relative">
             <div class="flex border-b-2 border-slate-400 text-lg font-medium">
                 {
@@ -28,9 +26,9 @@ import { skills } from "data";
 
         {
             skills.map(({ name, technologies }) => (
-                <div data-skill-container={name} class="grid grid-cols-3 gap-y-12">
+                <div data-skill-container={name} class="grid grid-cols-3">
                     {technologies.map(({ name, svg, hover }) => (
-                        <button class="group flex flex-col items-center gap-3 hover:cursor-pointer">
+                        <button class="group flex flex-col items-center gap-3 py-6 hover:cursor-pointer">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox={svg.viewBox}
