@@ -14,3 +14,7 @@ type SectionProps = {
     title: string;
     number: string;
 };
+
+type FooterProps = {
+    repositoryData: RepositoryData;
+};

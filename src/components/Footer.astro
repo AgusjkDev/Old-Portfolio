@@ -1,9 +1,8 @@
 ---
 import SocialIcons from "./SocialIcons.astro";
-import { getRepositoryData } from "services";
 import { footerAnchors } from "data";
 
-const repositoryData = await getRepositoryData();
+const { repositoryData } = Astro.props as FooterProps;
 ---
 
 <footer class="flex animate-fade-in flex-col gap-6 pb-6">
