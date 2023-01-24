@@ -11,10 +11,7 @@ import {
     Contact,
     Footer,
 } from "components";
-import { getRepositoryData } from "services";
 import "styles/globals.css";
-
-const repositoryData = await getRepositoryData();
 ---
 
 <html lang="es">
@@ -62,7 +59,7 @@ const repositoryData = await getRepositoryData();
 
         <Contact />
 
-        <Footer {repositoryData} />
+        <Footer />
     </body>
 </html>
 
