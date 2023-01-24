@@ -1,27 +1,8 @@
 ---
 import SideColumn from "./SideColumn.astro";
-import { socials } from "data";
+import SocialIcons from "./SocialIcons.astro";
 ---
 
 <SideColumn orientation="left">
-    {
-        socials.map(({ name, href, svg, hover }) => (
-            <a
-                aria-label={name}
-                title={`¡Contáctame vía ${name}!`}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                class="group transition-transform duration-300 hover:-translate-y-1"
-            >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox={svg.viewBox} class="h-6 w-6">
-                    <path
-                        class={`fill-slate-400 transition-colors duration-300 ${hover.fill}`}
-                        fill-rule="evenodd"
-                        d={svg.path}
-                    />
-                </svg>
-            </a>
-        ))
-    }
+    <SocialIcons />
 </SideColumn>
