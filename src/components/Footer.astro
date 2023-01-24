@@ -1,0 +1,43 @@
+---
+import SocialIcons from "./SocialIcons.astro";
+import { getRepositoryData } from "services";
+import { footerAnchors } from "data";
+
+const repositoryData = await getRepositoryData();
+---
+
+<footer class="flex flex-col gap-6 pb-6">
+    <!-- Only visible for smaller devices -->
+    <div class="md:hidden">
+        <SocialIcons />
+    </div>
+
+    <div class="flex flex-col items-center gap-2.5 font-sfmono text-xs">
+        <span>Hecho con mucho cariño por Agustín Arnoldi</span>
+
+        <div class="flex w-full justify-center gap-4">
+            {
+                footerAnchors.map(({ key, ariaLabel, title, href, svg }) => (
+                    <a
+                        arial-label={ariaLabel}
+                        title={title}
+                        href={href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="group flex items-center gap-1.5 transition-colors duration-300 hover:text-sky-400"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox={svg.viewBox}
+                            class="h-4 w-4 fill-slate-400 transition-colors duration-300 group-hover:fill-sky-400"
+                        >
+                            <path d={svg.path} />
+                        </svg>
+
+                        {repositoryData[key].toLocaleString("en-US")}
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+</footer>

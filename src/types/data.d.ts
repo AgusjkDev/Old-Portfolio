@@ -35,3 +35,11 @@ type Project = {
     description: string;
     technologies: string[];
 };
+
+type FooterAnchor = {
+    key: "stars" | "forks";
+    ariaLabel: string;
+    title: string;
+    href: string;
+    svg: SVG;
+};
