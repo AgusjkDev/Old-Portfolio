@@ -2,33 +2,22 @@
 import Section from "./Section.astro";
 import Button from "./Button.astro";
 import { projects } from "data";
-import { externalLink, gitHubFilledSmall } from "data/svgs";
 ---
 
 <Section id="projects" title="Proyectos" number="03">
     <article class="mx-auto mt-2 grid gap-12 lg:grid-cols-2 xl:gap-16 2xl:grid-cols-3">
         {
-            projects.map(({ title, url, repository, description, technologies }) => (
+            projects.map(({ title, anchors, description, technologies }) => (
                 <div class="hover:drop-shadow-white flex max-w-sm flex-col justify-between rounded bg-slate-700 p-7 transition-all duration-300 md:aspect-square">
                     <div class="flex flex-col gap-4">
                         <header class="flex justify-between">
                             <h3 class="text-2xl font-semibold text-slate-300">{title}</h3>
 
                             <div class="flex h-6 gap-2">
-                                {[
-                                    {
-                                        ariaLabel: `Enlace a ${title}`,
-                                        href: url,
-                                        svg: externalLink,
-                                    },
-                                    {
-                                        ariaLabel: `Enlace al repositorio de ${title}`,
-                                        href: repository,
-                                        svg: gitHubFilledSmall,
-                                    },
-                                ].map(({ ariaLabel, href, svg }) => (
+                                {anchors.map(({ ariaLabel, title, href, svg }) => (
                                     <a
                                         aria-label={ariaLabel}
+                                        title={title}
                                         href={href}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -59,7 +48,9 @@ import { externalLink, gitHubFilledSmall } from "data/svgs";
 
                     <Button
                         title="¡Lee más sobre éste proyecto en GitHub!"
-                        href={`${repository}#readme`}
+                        href={`${
+                            anchors.find(({ href }) => href.includes("github.com")).href
+                        }#readme`}
                         classes="mt-16 md:mt-0"
                     >
                         Leer Más

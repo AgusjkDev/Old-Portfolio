@@ -26,8 +26,12 @@ type Skill = {
 
 type Project = {
     title: string;
-    url: string;
-    repository: string;
+    anchors: {
+        ariaLabel: string;
+        title: string;
+        href: string;
+        svg: SVG;
+    }[];
     description: string;
     technologies: string[];
 };
