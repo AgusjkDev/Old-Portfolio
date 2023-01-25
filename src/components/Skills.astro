@@ -31,7 +31,7 @@ import { skills } from "data";
             skills.map(({ name, technologies }) => (
                 <div data-skill-container={name} class="grid grid-cols-3">
                     {technologies.map(({ name, svg, hover }) => (
-                        <button class="group flex flex-col items-center gap-3 py-6 hover:cursor-pointer">
+                        <button class="group flex flex-col items-center gap-3 py-6">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox={svg.viewBox}
