@@ -4,15 +4,11 @@ import { openMenu } from "data/svgs";
 ---
 
 <header
-    class="fixed top-0 z-[1] grid w-full animate-fade-in-down place-items-center bg-slate-800/90 py-8 backdrop-blur-[10px]"
+    class="fixed top-0 z-[1] grid w-full animate-fade-in-down place-items-center bg-primary-darkest/90 py-8 backdrop-blur-[10px]"
 >
     <!-- Only visible for smaller devices -->
     <button data-open-menu aria-label="Abrir Menu" class="md:hidden">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox={openMenu.viewBox}
-            class="h-11 w-11 fill-slate-400"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox={openMenu.viewBox} class="h-11 w-11">
             <path d={openMenu.path}></path>
         </svg>
     </button>

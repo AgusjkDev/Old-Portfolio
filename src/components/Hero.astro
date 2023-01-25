@@ -5,7 +5,7 @@ import { arrowDown } from "data/svgs";
 <main class="flex min-h-screen flex-col justify-evenly">
     <div class="flex flex-col gap-3 pt-28 md:max-w-xl lg:max-w-none">
         <h3
-            class="animate-fade-in font-sfmono text-sky-400 animation-delay-250 animation-duration-1000"
+            class="animate-fade-in font-sfmono text-secondary animation-delay-250 animation-duration-1000"
         >
             Hola, <span class="animate-fade-in animation-duration-1000 animation-delay-1000"
                 >me llamo</span
@@ -13,7 +13,7 @@ import { arrowDown } from "data/svgs";
         </h3>
 
         <h1
-            class="animate-fade-in text-4xl font-semibold leading-none text-slate-50 animation-duration-1000 animation-delay-2000 sm:text-5xl lg:text-6xl xl:text-7xl"
+            class="animate-fade-in text-4xl font-semibold leading-none text-primary-lightest animation-duration-1000 animation-delay-2000 sm:text-5xl lg:text-6xl xl:text-7xl"
         >
             Agustín Arnoldi.
         </h1>
@@ -36,12 +36,12 @@ import { arrowDown } from "data/svgs";
             data-hero-arrow
             data-section-id="about"
             aria-label="Ir a Sobre Mi"
-            class="animate-arrow [&>svg]:hover:fill-sky-400"
+            class="animate-arrow [&>svg]:hover:fill-secondary"
         >
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox={arrowDown.viewBox}
-                class="h-12 w-12 fill-slate-400 transition-colors duration-300"
+                class="h-12 w-12 transition-colors duration-300"
             >
                 <path d={arrowDown.path}></path>
             </svg>

@@ -41,9 +41,13 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-    @apply rounded-full border-[3px] border-solid border-transparent bg-slate-400 bg-clip-content;
+    @apply rounded-full border-[3px] border-solid border-transparent bg-primary bg-clip-content;
 }
 
 html::-webkit-scrollbar-track {
     @apply bg-transparent;
+}
+
+svg {
+    @apply fill-primary;
 }

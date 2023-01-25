@@ -6,7 +6,7 @@ import { skills } from "data";
 <Section id="skills" title="Habilidades" number="02">
     <article class="mx-auto flex w-full max-w-lg flex-col gap-2 sm:max-w-xl xl:max-w-2xl">
         <div class="relative">
-            <div class="flex border-b-2 border-slate-400 text-lg font-medium">
+            <div class="flex border-b-2 border-primary text-lg font-medium">
                 {
                     skills.map(({ name }, i) => (
                         <button
@@ -20,7 +20,10 @@ import { skills } from "data";
                 }
             </div>
 
-            <div data-skills-bar class="absolute bottom-0 h-[2px] bg-sky-400 transition-transform">
+            <div
+                data-skills-bar
+                class="absolute bottom-0 h-[2px] bg-secondary transition-transform"
+            >
             </div>
         </div>
 
@@ -32,7 +35,7 @@ import { skills } from "data";
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 viewBox={svg.viewBox}
-                                class={`${hover.fill} group-hover:drop-shadow-white w-8 fill-slate-400 transition-all duration-300`}
+                                class={`${hover.fill} group-hover:drop-shadow-white w-8 transition-all duration-300`}
                             >
                                 <path d={svg.path} />
                             </svg>
@@ -54,8 +57,8 @@ import { skills } from "data";
     const $skills = [...document.querySelectorAll("[data-skill]")];
     const $skillsBar = document.querySelector("[data-skills-bar]");
     const $skillContainers = document.querySelectorAll("[data-skill-container]");
-    const activeClasses = ["text-sky-400"];
-    const inactiveClasses = ["hover:text-sky-400"];
+    const activeClasses = ["text-secondary"];
+    const inactiveClasses = ["hover:text-secondary"];
 
     function handleSkillsBar($skill) {
         const skillWidth = $skill.getBoundingClientRect().width;

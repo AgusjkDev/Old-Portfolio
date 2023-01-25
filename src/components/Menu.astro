@@ -5,14 +5,10 @@ import { closeMenu } from "data/svgs";
 
 <aside
     data-menu
-    class="fixed inset-0 z-[2] flex translate-x-full flex-col items-center justify-center gap-10 bg-slate-800/[0.975] opacity-0 transition-all duration-500 md:hidden"
+    class="fixed inset-0 z-[2] flex translate-x-full flex-col items-center justify-center gap-10 bg-primary-darkest/[0.975] opacity-0 transition-all duration-500 md:hidden"
 >
     <button data-close-menu aria-label="Cerrar Menu">
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox={closeMenu.viewBox}
-            class="h-11 w-11 fill-slate-400"
-        >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox={closeMenu.viewBox} class="h-11 w-11">
             <path d={closeMenu.path}></path>
         </svg>
     </button>

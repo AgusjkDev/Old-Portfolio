@@ -20,12 +20,12 @@ export default function RepositoryData() {
                     href={href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-1.5 transition-colors duration-300 hover:text-sky-400"
+                    className="group flex items-center gap-1.5 transition-colors duration-300 hover:text-secondary"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox={svg.viewBox}
-                        className="h-4 w-4 fill-slate-400 transition-colors duration-300 group-hover:fill-sky-400"
+                        className="h-4 w-4 transition-colors duration-300 group-hover:fill-secondary"
                     >
                         <path d={svg.path} />
                     </svg>
