@@ -1,16 +1,16 @@
-type ButtonProps = {
+interface ButtonProps {
     title: string;
     href: string;
     download?: boolean;
     classes?: string;
-};
+}
 
-type SideColumnProps = {
+interface SideColumnProps {
     orientation: "left" | "right";
-};
+}
 
-type SectionProps = {
+interface SectionProps {
     id: string;
     title: string;
     number: string;
-};
+}
