@@ -3,7 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./src/**/*.{astro,ts}"],
+    content: ["./src/**/*.{astro,tsx,ts}"],
     theme: {
         extend: {
             fontFamily: {
