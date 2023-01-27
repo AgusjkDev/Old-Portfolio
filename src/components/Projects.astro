@@ -5,7 +5,7 @@ import { projects } from "data";
 ---
 
 <Section id="projects" title="Proyectos" number="03">
-    <article class="mx-auto mt-2 grid gap-12 lg:grid-cols-2 xl:gap-16 2xl:grid-cols-3">
+    <article class="mx-auto mt-2 grid gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12 2xl:grid-cols-3">
         {
             projects.map(({ title, anchors, description, technologies }) => (
                 <div class="bg-primary-darker hover:drop-shadow-white flex max-w-sm flex-col justify-between rounded p-7 transition-all duration-300 md:aspect-square">
@@ -37,7 +37,7 @@ import { projects } from "data";
 
                         <p class="text-primary-light">{description}</p>
 
-                        <div class="flex flex-wrap justify-between gap-3">
+                        <div class="flex flex-wrap gap-3">
                             {technologies.map(technology => (
                                 <p class="bg-primary-dark/75 font-sfmono text-primary-light rounded-sm px-2 py-1.5 text-xs font-semibold">
                                     {technology}
