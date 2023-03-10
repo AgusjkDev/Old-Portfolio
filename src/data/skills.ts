@@ -137,6 +137,14 @@ const skills: Skill[] = [
                     text: "group-hover:text-jsonwebtokens",
                 },
             },
+            {
+                name: "Socket.io",
+                svg: svgs.socketio,
+                hover: {
+                    fill: "group-hover:fill-socketio",
+                    text: "group-hover:text-socketio",
+                },
+            },
         ],
     },
     {

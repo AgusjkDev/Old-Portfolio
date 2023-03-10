@@ -41,6 +41,7 @@ module.exports = {
                 flask: "#000000",
                 postgresql: "#4169e1",
                 jsonwebtokens: "#000000",
+                socketio: "#000000",
                 adobephotoshop: "#31a8ff",
                 excel: "#217346",
                 git: "#f05032",
