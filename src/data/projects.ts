@@ -62,24 +62,24 @@ const projects: Project[] = [
         technologies: ["React.js", "JavaScript", "Vite.js", "TailwindCSS"],
     },
     {
-        title: "Portfolio",
+        title: "Hackathon Chat Feedback",
         anchors: [
             {
-                ariaLabel: "Ir a mi portfolio",
-                title: "¡Visita mi portfolio!",
-                href: "https://arnoldiagustin.vercel.app",
+                ariaLabel: "Ir a Hackathon Chat Feedback",
+                title: "¡Visita Hackathon Chat Feedback!",
+                href: "https://hackathon-chat-feedback.vercel.app",
                 svg: externalLink,
             },
             {
                 ariaLabel: "Ir al repositorio de mi portfolio",
                 title: "¡Visita el repositorio de mi portfolio!",
-                href: "https://github.com/agusjkdev/portfolio",
+                href: "https://github.com/agusjkdev/hackathon-chat-feedback",
                 svg: gitHubFilledSmall,
             },
         ],
         description:
-            "Éste proyecto, mi portafolio personal. Hecho con mucho amor y con una tecnología que nunca antes había usado, ¡espero que te agrade!",
-        technologies: ["Astro", "TypeScript", "TailwindCSS"],
+            "Proyecto con el cual participé y acabé cuarto en una hackathon. Clasifica mensajes de un chat de Twitch y los muestra en tiempo real en un sitio web.",
+        technologies: ["Next.js", "TypeScript", "TailwindCSS", "TailwindCSS", "Socket.io"],
     },
     {
         title: "Poems RESTful API",
