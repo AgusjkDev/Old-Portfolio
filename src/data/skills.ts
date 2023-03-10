@@ -131,7 +131,7 @@ const skills: Skill[] = [
             },
             {
                 name: "JSON Web Tokens",
-                svg: svgs.JsonWebTokens,
+                svg: svgs.jsonWebTokens,
                 hover: {
                     fill: "group-hover:fill-jsonwebtokens",
                     text: "group-hover:text-jsonwebtokens",
